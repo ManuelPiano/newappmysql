@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".RegistrarUsuario"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:background="@drawable/register_fondo">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="25dp"
+        app:cardCornerRadius="10dp"
+        android:layout_marginEnd="25dp"
+        android:layout_marginBottom="35dp"
+        app:cardUseCompatPadding="true"
+        android:elevation="4dp">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:layout_margin="15dp">
+
+                <ImageView
+                    android:layout_width="150dp"
+                    android:layout_height="150dp"
+                    android:src="@drawable/login"
+                    android:layout_gravity="center"/>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/textView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Registro Usuario"
+                        android:textColor="@android:color/black"
+                        android:textSize="28sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/btn_Login"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginTop="4dp"
+                        android:onClick="OnClick"
+                        android:text="Login"
+                        android:textColor="@color/teal_200"
+                        android:textSize="24sp"
+                        android:textStyle="bold" />
+                </RelativeLayout>
+
+                <EditText
+                    android:id="@+id/edt_IdUser"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:hint="ID"
+                    android:layout_marginTop="20dp"
+                    android:padding="10dp"
+                    android:background="@drawable/textverde"
+                    android:drawableStart="@drawable/ic_key_log"
+                    android:inputType="phone" />
+
+                <EditText
+                    android:id="@+id/edt_NomUser"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:hint="Nombre"
+                    android:layout_marginTop="20dp"
+                    android:padding="10dp"
+                    android:background="@drawable/textverde"
+                    android:inputType="text"
+                    android:drawableStart="@drawable/ic_user"/>
+
+                <EditText
+                    android:id="@+id/edt_ApellUser"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:hint="Apellidos"
+                    android:layout_marginTop="20dp"
+                    android:padding="10dp"
+                    android:background="@drawable/textverde"
+                    android:inputType="text"
+                    android:drawableStart="@drawable/ic_user"/>
+
+                <EditText
+                    android:id="@+id/edt_correoUser"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:hint="Correo Electronico"
+                    android:layout_marginTop="20dp"
+                    android:padding="10dp"
+                    android:background="@drawable/textverde"
+                    android:inputType="textEmailAddress"
+                    android:drawableStart="@drawable/ic_email"/>
+
+                <EditText
+                    android:id="@+id/edt_usuario"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:hint="Usuario"
+                    android:layout_marginTop="20dp"
+                    android:padding="10dp"
+                    android:background="@drawable/textverde"
+                    android:inputType="text"
+                    android:drawableStart="@drawable/ic_user"/>
+
+                <EditText
+                    android:id="@+id/edt_claveUser"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:ems="10"
+                    android:background="@drawable/textverde"
+                    android:hint="Contraseña"
+                    android:layout_marginTop="20dp"
+                    android:padding="10dp"
+                    android:inputType="textPassword"
+                    android:drawableStart="@drawable/ic_clave"/>
+
+                <EditText
+                    android:id="@+id/edt_Tipo"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:hint="Tipo"
+                    android:layout_marginTop="20dp"
+                    android:padding="10dp"
+                    android:background="@drawable/textverde"
+                    android:inputType="text"
+                    android:drawableStart="@drawable/ic_tipo"/>
+
+                <androidx.appcompat.widget.AppCompatSpinner
+                    android:id="@+id/sp_EstadoUser"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:entries="@array/estadoUser"
+                    android:minHeight="40dp"
+                    android:layout_marginTop="20dp"/>
+
+                <EditText
+                    android:id="@+id/edt_Pregunta"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:hint="Pregunta"
+                    android:layout_marginTop="20dp"
+                    android:padding="10dp"
+                    android:background="@drawable/textverde"
+                    android:inputType="text"
+                    android:drawableStart="@drawable/ic_question"/>
+
+                <EditText
+                    android:id="@+id/edt_Respuesta"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:hint="Respuesta"
+                    android:layout_marginTop="20dp"
+                    android:padding="10dp"
+                    android:background="@drawable/textverde"
+                    android:inputType="text"
+                    android:drawableStart="@drawable/ic_reply"/>
+
+                <TextView
+                    android:id="@+id/tv_fechaRegistro"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:text="yyyy-MM-dd HH:mm:ss"
+                    android:textColor="@color/black"
+                    />
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btn_registrar"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_marginTop="32dp"
+                    android:background="@drawable/button"
+                    android:onClick="OnClick"
+                    android:text="Registrate"
+                    android:textColor="@android:color/white"
+                    android:textSize="15dp" />
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:layout_width="match_parent"
+                    android:visibility="invisible"
+                    android:layout_height="30dp">
+
+                </androidx.appcompat.widget.AppCompatButton>
+
+            </LinearLayout>
+        </ScrollView>
+
+    </androidx.cardview.widget.CardView>
+
+</androidx.appcompat.widget.LinearLayoutCompat>

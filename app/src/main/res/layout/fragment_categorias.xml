@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white"
+    android:layout_margin = "5dp"
+    tools:context=".ui.categorias.Categorias">
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="0dp">
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/title_cat"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:textSize="30dp"
+        android:textStyle="bold"
+        android:textColor="#040404"
+        />
+
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:src="@drawable/agregar_cat"
+        android:layout_marginTop="20dp"/>
+
+    <!-- TODO: Update blank fragment layout -->
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/ti_idCategoria"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:textColorHint="@color/grey1">
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/etid"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="0dp"
+            android:drawableStart="@drawable/ic_key"
+            android:drawablePadding="5dp"
+            android:ems="10"
+            android:hint="Ingrese id de categoria"
+            android:inputType="phone"
+            android:paddingLeft="1dp"
+            android:textColor="#03168B"
+            android:textSize="14dp" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/ti_nameCategoria"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:textColorHint="@color/grey1">
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/etnombre"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="0dp"
+            android:drawableStart="@drawable/ic_descripcion"
+            android:drawablePadding="5dp"
+            android:ems="10"
+            android:hint="Ingrese nombre de categoria"
+            android:inputType="text"
+            android:paddingLeft="1dp"
+            android:textColor="#03168B"
+            android:textSize="14dp"
+            />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <androidx.appcompat.widget.AppCompatSpinner
+        android:id="@+id/sp1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:entries="@array/valorspinner"
+        android:minHeight="48dp" />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="3dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:background="@color/white"
+        >
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btncat"
+            style="@style/Widget.AppCompat.Button.Borderless.Colored"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_weight="1"
+            android:background="@drawable/buttonshape"
+            android:onClick="onClick"
+            android:text="Guardar"
+            android:textColor="@color/white" />
+
+        <Space
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.1"/>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnNew"
+            style="@style/Widget.AppCompat.Button.Borderless.Colored"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_weight="1"
+            android:text="Nueva Categoria"
+            android:textColor="@color/white"
+            android:background="@drawable/buttonshape"
+            />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tvrespuesta"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Respuesta servidor "
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:textSize="12dp"
+        android:textStyle="bold"
+        android:layout_margin="16dp"
+        />
+
+</androidx.appcompat.widget.LinearLayoutCompat>

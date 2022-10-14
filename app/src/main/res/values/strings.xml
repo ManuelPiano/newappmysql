@@ -1,0 +1,39 @@
+<resources>
+    <string name="app_name">AppMySQL</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
+
+    <string name="menu_home">INICIO</string>
+    <string name="menu_gallery">Gallery</string>
+    <string name="menu_slideshow">Slideshow</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_cat">Registro Categorias</string>
+    <string name="title_prod">Registrar Productos</string>
+
+    <string-array name="valorspinner">
+        <item>Seleccione una opción</item>
+        <item>1</item>
+        <item>0</item>
+    </string-array>
+
+    <string-array name="estadoProducto">
+        <item>Seleccione una opción</item>
+        <item>1</item>
+        <item>0</item>
+    </string-array>
+
+    <string-array name="sp_fk">
+        <item>Seleccione una categoria</item>
+    </string-array>
+
+    <string-array name="estadoUser">
+        <item>Seleccione una opción</item>
+        <item>Activo</item>
+        <item>Inactivo</item>
+    </string-array>
+</resources>

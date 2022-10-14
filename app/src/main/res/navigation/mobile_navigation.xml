@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/nav_home">
+
+    <fragment
+        android:id="@+id/nav_home"
+        android:name="com.itca.appmysql.ui.home.HomeFragment"
+        android:label="@string/menu_home"
+        tools:layout="@layout/fragment_home" />
+
+    <fragment
+        android:id="@+id/nav_gallery"
+        android:name="com.itca.appmysql.ui.gallery.GalleryFragment"
+        android:label="@string/menu_gallery"
+        tools:layout="@layout/fragment_gallery" />
+
+    <fragment
+        android:id="@+id/nav_slideshow"
+        android:name="com.itca.appmysql.ui.slideshow.SlideshowFragment"
+        android:label="@string/menu_slideshow"
+        tools:layout="@layout/fragment_slideshow" />
+
+    <fragment
+        android:id="@+id/nav_categorias"
+        android:name="com.itca.appmysql.ui.categorias.Categorias"
+        android:label="Nueva categoria"
+        tools:layout="@layout/fragment_categorias" />
+
+    <fragment
+        android:id="@+id/nav_QCategorias"
+        android:name="com.itca.appmysql.ui.qcategorias.QCategorias"
+        android:label="Consulta categorias"
+        tools:layout="@layout/fragment_q_categorias" />
+
+    <fragment
+        android:id="@+id/nav_qproductos"
+        android:name="com.itca.appmysql.ui.qproductos.Qproductos"
+        android:label="Consulta productos"
+        tools:layout="@layout/fragment_qproductos" />
+    <fragment
+        android:id="@+id/nav_productos"
+        android:name="com.itca.appmysql.ui.productos.Productos"
+        android:label="fragment_productos"
+        tools:layout="@layout/fragment_productos" />
+
+</navigation>
