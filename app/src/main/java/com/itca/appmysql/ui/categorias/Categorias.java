@@ -69,13 +69,11 @@ public class Categorias extends Fragment {
                     datoSelect = "";
                 }
             }
-
             @Override
             public void onNothingSelected(AdapterView<?> adapterView) {
 
             }
         });
-
 
         btncat.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -151,7 +149,7 @@ public class Categorias extends Fragment {
 
     private void guardarcategoria(final Context context, final int id_categoria, final String nom_categoria, final int estado_categoria) {
         String url = "https://noegarciasis11b.000webhostapp.com/service/guardar_categorias.php";
-        //String url = "http://localhost/service2020/guardar_categorias.php";
+        //String url = "http://localhost/service/guardar_categorias.php";
         StringRequest request = new StringRequest(Request.Method.POST,url, new Response.Listener<String>() {
             @Override
             public void onResponse(String response) {

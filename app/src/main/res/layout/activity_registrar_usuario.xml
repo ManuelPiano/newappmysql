@@ -129,16 +129,13 @@
                     android:inputType="textPassword"
                     android:drawableStart="@drawable/ic_clave"/>
 
-                <EditText
-                    android:id="@+id/edt_Tipo"
+                <androidx.appcompat.widget.AppCompatSpinner
+                    android:id="@+id/sp_TipoUser"
                     android:layout_width="match_parent"
-                    android:layout_height="40dp"
-                    android:hint="Tipo"
-                    android:layout_marginTop="20dp"
-                    android:padding="10dp"
-                    android:background="@drawable/textverde"
-                    android:inputType="text"
-                    android:drawableStart="@drawable/ic_tipo"/>
+                    android:layout_height="wrap_content"
+                    android:entries="@array/tipoUser"
+                    android:minHeight="40dp"
+                    android:layout_marginTop="20dp"/>
 
                 <androidx.appcompat.widget.AppCompatSpinner
                     android:id="@+id/sp_EstadoUser"
@@ -148,16 +145,13 @@
                     android:minHeight="40dp"
                     android:layout_marginTop="20dp"/>
 
-                <EditText
-                    android:id="@+id/edt_Pregunta"
+                <androidx.appcompat.widget.AppCompatSpinner
+                    android:id="@+id/sp_PreguntaUser"
                     android:layout_width="match_parent"
-                    android:layout_height="40dp"
-                    android:hint="Pregunta"
+                    android:layout_height="wrap_content"
                     android:layout_marginTop="20dp"
-                    android:padding="10dp"
-                    android:background="@drawable/textverde"
-                    android:inputType="text"
-                    android:drawableStart="@drawable/ic_question"/>
+                    android:entries="@array/preguntaUser"
+                    android:minHeight="40dp" />
 
                 <EditText
                     android:id="@+id/edt_Respuesta"

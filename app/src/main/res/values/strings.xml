@@ -32,8 +32,22 @@
     </string-array>
 
     <string-array name="estadoUser">
-        <item>Seleccione una opción</item>
+        <item>Seleccione un estado usuario</item>
         <item>Activo</item>
         <item>Inactivo</item>
+    </string-array>
+
+    <string-array name="tipoUser">
+        <item>Seleccione un tipo de usuario</item>
+        <item>1</item>
+        <item>0</item>
+    </string-array>
+
+
+    <string-array name="preguntaUser">
+        <item>Seleccione una pregunta</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
     </string-array>
 </resources>
