@@ -41,6 +41,7 @@ public class RegistrarUsuario extends AppCompatActivity {
 
 
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -52,10 +53,10 @@ public class RegistrarUsuario extends AppCompatActivity {
         email = (EditText) findViewById(R.id.edt_correoUser);
         user = (EditText) findViewById(R.id.edt_usuario);
         clave = (EditText) findViewById(R.id.edt_claveUser);
+        pregunta = (Spinner) findViewById(R.id.sp_PreguntaUser);
         respuesta = (EditText) findViewById(R.id.edt_Respuesta);
         tipo = (Spinner) findViewById(R.id.sp_TipoUser);
         estado = (Spinner) findViewById(R.id.sp_EstadoUser);
-        pregunta = (Spinner) findViewById(R.id.sp_PreguntaUser);
         fecha_registro = (TextView) findViewById(R.id.tv_fechaRegistro);
         fecha_registro.setText(timedate());
         btnRegistrar = (Button) findViewById(R.id.btn_registrar);
@@ -140,7 +141,7 @@ public class RegistrarUsuario extends AppCompatActivity {
                     dato = "Debe seleccionar una ópcion";
                     Toast.makeText(RegistrarUsuario.this, ""+dato, Toast.LENGTH_SHORT).show();
                 }else{
-                    guardarUser(RegistrarUsuario.this, Integer.parseInt(iduser), nombreUser, apellUser, emailUser, usuario, claveU, respuestaU, Integer.parseInt(tipo), Integer.parseInt(estado), pregunta);
+                    guardarUser(RegistrarUsuario.this, Integer.parseInt(iduser), nombreUser, apellUser, emailUser, usuario, claveU, pregunta, respuestaU, Integer.parseInt(tipo), Integer.parseInt(estado));
                 }
             }
         });
@@ -156,8 +157,8 @@ public class RegistrarUsuario extends AppCompatActivity {
 
     private void guardarUser(final Context context, final int id_user, final String nombreUser,
                              final String apellUser, final String emailUser, final String usuario,
-                             final String claveU, final String respuestaU, final int tipo, final int estado, final String pregunta) {
-        String url = "https://noegarciasis11b.000webhostapp.com/service/guardar_usuario.php";
+                             final String claveU, final String pregunta, final String respuestaU, final int tipo, final int estado) {
+        String url = "https://salva10012002.000webhostapp.com/service/guardar_usuario.php";
         //String url = "http://localhost/service/guardar_categorias.php";
         StringRequest request = new StringRequest(Request.Method.POST,url, new Response.Listener<String>() {
             @Override

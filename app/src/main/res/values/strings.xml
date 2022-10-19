@@ -33,8 +33,8 @@
 
     <string-array name="estadoUser">
         <item>Seleccione un estado usuario</item>
-        <item>Activo</item>
-        <item>Inactivo</item>
+        <item>1</item>
+        <item>0</item>
     </string-array>
 
     <string-array name="tipoUser">
@@ -46,8 +46,8 @@
 
     <string-array name="preguntaUser">
         <item>Seleccione una pregunta</item>
-        <item>1</item>
-        <item>2</item>
-        <item>3</item>
+        <item>1- ¿Color favorito?</item>
+        <item>2- ¿Nombre de su mascota?</item>
+        <item>3- ¿Canción favorita? </item>
     </string-array>
 </resources>
