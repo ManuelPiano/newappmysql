@@ -10,6 +10,8 @@ import android.view.ViewGroup;
 
 import com.itca.appmysql.R;
 
+import java.util.ArrayList;
+
 /**
  * A simple {@link Fragment} subclass.
  * Use the {@link Qproductos#newInstance} factory method to
@@ -63,4 +65,5 @@ public class Qproductos extends Fragment {
         // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_qproductos, container, false);
     }
+
 }

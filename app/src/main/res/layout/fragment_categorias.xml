@@ -126,13 +126,50 @@
             android:layout_width="0dp"
             android:layout_height="40dp"
             android:layout_weight="1"
-            android:text="Nueva Categoria"
+            android:text="LIMPIAR"
             android:textColor="@color/white"
             android:background="@drawable/buttonshape"
             />
 
     </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="3dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:background="@color/white"
+        >
 
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnedit"
+            style="@style/Widget.AppCompat.Button.Borderless.Colored"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_weight="1"
+            android:background="@drawable/buttonshape"
+            android:onClick="onClick"
+            android:text="MODIFICAR"
+            android:textColor="@color/white" />
+
+        <Space
+            android:layout_width="13dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.1" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btneli"
+            style="@style/Widget.AppCompat.Button.Borderless.Colored"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_weight="1"
+            android:text="ELIMINAR"
+            android:textColor="@color/white"
+            android:background="@drawable/buttonshape"
+            />
+
+    </LinearLayout>
     <TextView
         android:id="@+id/tvrespuesta"
         android:layout_width="match_parent"

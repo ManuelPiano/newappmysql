@@ -48,7 +48,7 @@ public class Productos extends Fragment {
             et_precio, et_unidadmedida;
     private Spinner sp_estadoProductos, sp_fk_categoria;
     private TextView tv_fechahora;
-    private Button btnSave, btnNew;
+    private Button btnSave, btnNew, btnmod, btneliP;
 
     ProgressDialog progressDialog;
     ArrayList<String> lista = null;
@@ -95,6 +95,8 @@ public class Productos extends Fragment {
         tv_fechahora.setText(timedate());
         btnSave = view.findViewById(R.id.btnProd);
         btnNew = view.findViewById(R.id.btnNewP);
+        btnmod = view.findViewById(R.id.btnmodP);
+        btneliP = view.findViewById(R.id.btneliP);
 
         sp_estadoProductos.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
@@ -186,6 +188,52 @@ public class Productos extends Fragment {
                     save_productos(getContext(), id, nombre, descripcion, stock, precio, unidad, datoStatusProduct, idcategoria);
                 }else{
                     Toast.makeText(getContext(), "Debe seleccionar la categoria.", Toast.LENGTH_SHORT).show();
+                }
+            }
+        });
+        btnmod.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                String id = et_id.getText().toString();
+                String nombre = et_nombre_prod.getText().toString();
+                String descripcion = et_descripcion.getText().toString();
+                String stock = et_stock.getText().toString();
+                String precio = et_precio.getText().toString();
+                String unidad = et_unidadmedida.getText().toString();
+
+                if(id.length() == 0){
+                    et_id.setError("Campo obligatorio.");
+                }else if(nombre.length() == 0){
+                    et_nombre_prod.setError("Campo obligatorio.");
+                }else if(descripcion.length() == 0){
+                    et_descripcion.setError("Campo obligatorio.");
+                }else if(stock.length() == 0){
+                    et_stock.setError("Campo obligatorio.");
+                }else if(precio.length() == 0){
+                    et_precio.setError("Campo obligatorio.");
+                }else if(unidad.length() == 0){
+                    et_unidadmedida.setError("Campo obligatorio.");
+                }else if(sp_estadoProductos.getSelectedItemPosition() == 0){
+                    Toast.makeText(getContext(), "Debe seleccionar el estado del producto.", Toast.LENGTH_SHORT).show();
+                }else if(sp_fk_categoria.getSelectedItemPosition() > 0){
+                    //Toast.makeText(getContext(), "Good...",Toast.LENGTH_SHORT).show();
+                    update_productos(getContext(), id, nombre, descripcion, stock, precio, unidad, datoStatusProduct, idcategoria);
+                }else{
+                    Toast.makeText(getContext(), "Debe seleccionar la categoria.", Toast.LENGTH_SHORT).show();
+                }
+            }
+        });
+        btneliP.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                String id = et_id.getText().toString();
+
+                if(id.length() == 0){
+                    et_id.setError("Campo obligatorio.");
+
+                }else{
+                    delete_productos(getContext(), id);
+
                 }
             }
         });
@@ -315,6 +363,95 @@ public class Productos extends Fragment {
                 map.put("uni_medida", uni_medida);
                 map.put("estado_prod", estado_prod);
                 map.put("categoria", categoria);
+                return map;
+            }
+        };
+        MySingleton.getInstance(context).addToRequestQueue(stringRequest);
+    }
+    private void update_productos(final Context context, final String id_prod,
+                                  final String nom_prod, final String des_prod,
+                                  final String stock, final String precio,
+                                  final String uni_medida, final String estado_prod,
+                                  final String categoria){
+        StringRequest stringRequest = new StringRequest(Request.Method.POST, Setting_VAR.URL_modificar_productos, new Response.Listener<String>() {
+            @Override
+            public void onResponse(String response) {
+                JSONObject requestJSON = null;
+                try {
+                    requestJSON = new JSONObject(response.toString());
+                    String estado = requestJSON.getString("estado");
+                    String mensaje = requestJSON.getString("mensaje");
+                    if (estado.equals("1")) {
+                        Toast.makeText(context, mensaje,
+                                Toast.LENGTH_SHORT).show();
+                        //Toast.makeText(context, "Registro almacenado en MySQL.", Toast.LENGTH_SHORT).show();
+                    } else if (estado.equals("2")) {
+                        Toast.makeText(context, "" + mensaje,
+                                Toast.LENGTH_SHORT).show();
+                    }
+                } catch (JSONException e) {
+                    e.printStackTrace();
+                }
+
+            }
+        }, new Response.ErrorListener() {
+            @Override
+            public void onErrorResponse(VolleyError error) {
+                Toast.makeText(context, "No se puede modificar. \n" + "Intentelo más tarde.", Toast.LENGTH_SHORT).show();
+            }
+        }){
+            protected Map<String, String> getParams() throws AuthFailureError {
+                //En este método se colocan o se setean los valores a recibir por el fichero *.php
+                Map<String, String> map = new HashMap<>();
+                map.put("Content-Type", "application/json; charset=utf-8");
+                map.put("Accept", "application/json");
+                map.put("id_producto", id_prod);
+                map.put("nom_producto", nom_prod);
+                map.put("des_producto", des_prod);
+                map.put("stock", stock);
+                map.put("precio", precio);
+                map.put("unidad_medida", uni_medida);
+                map.put("estado_producto", estado_prod);
+                map.put("categoria", categoria);
+                return map;
+            }
+        };
+        MySingleton.getInstance(context).addToRequestQueue(stringRequest);
+    }
+    private void delete_productos(final Context context, final String id_prod){
+        StringRequest stringRequest = new StringRequest(Request.Method.POST, Setting_VAR.URL_eliminar_productos, new Response.Listener<String>() {
+            @Override
+            public void onResponse(String response) {
+                JSONObject requestJSON = null;
+                try {
+                    requestJSON = new JSONObject(response.toString());
+                    String estado = requestJSON.getString("estado");
+                    String mensaje = requestJSON.getString("mensaje");
+                    if (estado.equals("1")) {
+                        Toast.makeText(context, mensaje,
+                                Toast.LENGTH_SHORT).show();
+                        //Toast.makeText(context, "Registro almacenado en MySQL.", Toast.LENGTH_SHORT).show();
+                    } else if (estado.equals("2")) {
+                        Toast.makeText(context, "" + mensaje,
+                                Toast.LENGTH_SHORT).show();
+                    }
+                } catch (JSONException e) {
+                    e.printStackTrace();
+                }
+
+            }
+        }, new Response.ErrorListener() {
+            @Override
+            public void onErrorResponse(VolleyError error) {
+                Toast.makeText(context, "No se puede eliminar. \n" + "Intentelo más tarde.", Toast.LENGTH_SHORT).show();
+            }
+        }){
+            protected Map<String, String> getParams() throws AuthFailureError {
+                //En este método se colocan o se setean los valores a recibir por el fichero *.php
+                Map<String, String> map = new HashMap<>();
+                map.put("Content-Type", "application/json; charset=utf-8");
+                map.put("Accept", "application/json");
+                map.put("id_produc", id_prod);
                 return map;
             }
         };

@@ -1,5 +1,6 @@
 package com.itca.appmysql.ui.qcategorias;
 
+import android.content.Context;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
@@ -7,8 +8,23 @@ import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Toast;
 
+import com.android.volley.AuthFailureError;
+import com.android.volley.Request;
+import com.android.volley.Response;
+import com.android.volley.VolleyError;
+import com.android.volley.toolbox.StringRequest;
+import com.itca.appmysql.MySingleton;
 import com.itca.appmysql.R;
+import com.itca.appmysql.dto_categorias;
+
+import org.json.JSONException;
+import org.json.JSONObject;
+
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Map;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -16,6 +32,8 @@ import com.itca.appmysql.R;
  * create an instance of this fragment.
  */
 public class QCategorias extends Fragment {
+    ArrayList<String> lista = null;
+    ArrayList<dto_categorias> listaCategorias;
 
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -62,5 +80,17 @@ public class QCategorias extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_q_categorias, container, false);
+
     }
+
+    public ArrayList<String> obtenerListaCategorias() {
+        //ArrayList<String> lista = new ArrayList<String>();
+        lista = new ArrayList<String>();
+        for(int i=0;i<=listaCategorias.size();i++){
+            lista.add(listaCategorias.get(i).getId_categoria()+" ~ "+listaCategorias.get(i).getNom_categoria());
+        }
+        return lista;
+    }
+
+
 }
