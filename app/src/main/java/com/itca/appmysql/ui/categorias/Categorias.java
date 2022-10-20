@@ -1,5 +1,7 @@
 package com.itca.appmysql.ui.categorias;
 
+import static com.itca.appmysql.Setting_VAR.URL_consultaALLCategorias;
+
 import android.content.Context;
 import android.os.Bundle;
 
@@ -21,15 +23,20 @@ import com.android.volley.AuthFailureError;
 import com.android.volley.Request;
 import com.android.volley.Response;
 import com.android.volley.VolleyError;
+import com.android.volley.toolbox.JsonArrayRequest;
 import com.android.volley.toolbox.StringRequest;
 import com.itca.appmysql.MySingleton;
 import com.itca.appmysql.R;
+import com.itca.appmysql.Setting_VAR;
+import com.itca.appmysql.dto_categorias;
 
+import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 
@@ -40,10 +47,12 @@ public class Categorias extends Fragment {
     private TextView tvrespuesta;
     private ListView listC;
 
+
     String datoSelect = "";
 
     public Categorias() {
     }
+
 
 
     /*
@@ -69,6 +78,7 @@ public class Categorias extends Fragment {
         listC = list.findViewById(R.id.Viewcate);
 
 
+
         sp1.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
@@ -84,8 +94,6 @@ public class Categorias extends Fragment {
 
             }
         });
-
-
 
 
         btncat.setOnClickListener(new View.OnClickListener() {
@@ -208,7 +216,6 @@ public class Categorias extends Fragment {
         MySingleton.getInstance(context).addToRequestQueue(stringRequest);
 
     }
-
 
     private void guardarcategoria(final Context context, final int id_categoria, final String nom_categoria, final int estado_categoria) {
         String url = "https://salva10012002.000webhostapp.com/service/guardar_categorias.php";
