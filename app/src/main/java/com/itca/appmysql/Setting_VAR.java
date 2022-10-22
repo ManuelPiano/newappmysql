@@ -18,6 +18,7 @@ public class Setting_VAR {
     //URL para cargar valores en forma de lista de las categorias en Spinner (ForeignKey / Llave foranea)
     //Para mostrar en Spinner del layout productos
     public static final String URL_consultaALLCategorias = "https://salva10012002.000webhostapp.com/service/buscar_Categorias.php";
+    public static final String URL_consultaALLProducto = "https://salva10012002.000webhostapp.com/service/buscar_Categorias.php";
     //public static final String URL_consultaALLCategorias = "http://localhost/service/buscar_Categorias.php";
     //URL para regsitrar productos nuevos.
     public static final String URL_registrar_productos = "https://salva10012002.000webhostapp.com/service/guardar_productos.php";
