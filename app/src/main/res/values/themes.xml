@@ -22,4 +22,7 @@
     <style name="Theme.AppMySQL.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
 
     <style name="Theme.AppMySQL.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+    <style name="Splashtheme" parent="Theme.AppMySQL">
+        <item name="android:windowBackground">@drawable/alvarado</item>
+    </style>
 </resources>

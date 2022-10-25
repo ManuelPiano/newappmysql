@@ -3,62 +3,20 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="..\:/Users/Angel/AndroidStudioProjects/AppMySQLCategorias/app/src/main/res/drawable/button.xml" value="0.138" />
-        <entry key="..\:/Users/Angel/AndroidStudioProjects/AppMySQLCategorias/app/src/main/res/drawable/button_color.xml" value="0.138" />
-        <entry key="..\:/Users/Angel/AndroidStudioProjects/AppMySQLCategorias/app/src/main/res/drawable/buttonshape.xml" value="0.123" />
-        <entry key="..\:/Users/Angel/AndroidStudioProjects/AppMySQLCategorias/app/src/main/res/drawable/ic_categorias.xml" value="0.123" />
-        <entry key="..\:/Users/Angel/AndroidStudioProjects/AppMySQLCategorias/app/src/main/res/drawable/ic_descripcion.xml" value="0.123" />
-        <entry key="..\:/Users/Angel/AndroidStudioProjects/AppMySQLCategorias/app/src/main/res/drawable/ic_home.xml" value="0.123" />
-        <entry key="..\:/Users/Angel/AndroidStudioProjects/AppMySQLCategorias/app/src/main/res/drawable/ic_id.xml" value="0.123" />
-        <entry key="..\:/Users/Angel/AndroidStudioProjects/AppMySQLCategorias/app/src/main/res/drawable/ic_money.xml" value="0.123" />
-        <entry key="..\:/Users/Angel/AndroidStudioProjects/AppMySQLCategorias/app/src/main/res/drawable/ic_name_prod.xml" value="0.123" />
-        <entry key="..\:/Users/Angel/AndroidStudioProjects/AppMySQLCategorias/app/src/main/res/drawable/ic_stock.xml" value="0.123" />
-        <entry key="..\:/Users/Angel/AndroidStudioProjects/AppMySQLCategorias/app/src/main/res/drawable/ic_um.xml" value="0.123" />
-        <entry key="..\:/Users/Angel/AndroidStudioProjects/AppMySQLCategorias/app/src/main/res/drawable/textverde.xml" value="0.138" />
-        <entry key="..\:/Users/Angel/AndroidStudioProjects/AppMySQLCategorias/app/src/main/res/layout/activity_login.xml" value="0.25" />
-        <entry key="..\:/Users/Angel/AndroidStudioProjects/AppMySQLCategorias/app/src/main/res/layout/activity_main.xml" value="0.20416666666666666" />
-        <entry key="..\:/Users/Angel/AndroidStudioProjects/AppMySQLCategorias/app/src/main/res/layout/activity_registrar_usuario.xml" value="0.20416666666666666" />
-        <entry key="..\:/Users/Angel/AndroidStudioProjects/AppMySQLCategorias/app/src/main/res/layout/app_bar_main.xml" value="0.18" />
-        <entry key="..\:/Users/Angel/AndroidStudioProjects/AppMySQLCategorias/app/src/main/res/layout/content_main.xml" value="0.20416666666666666" />
-        <entry key="..\:/Users/Angel/AndroidStudioProjects/AppMySQLCategorias/app/src/main/res/layout/fragment_categorias.xml" value="0.22" />
-        <entry key="..\:/Users/Angel/AndroidStudioProjects/AppMySQLCategorias/app/src/main/res/layout/fragment_gallery.xml" value="0.20416666666666666" />
-        <entry key="..\:/Users/Angel/AndroidStudioProjects/AppMySQLCategorias/app/src/main/res/layout/fragment_home.xml" value="0.20416666666666666" />
-        <entry key="..\:/Users/Angel/AndroidStudioProjects/AppMySQLCategorias/app/src/main/res/layout/fragment_productos.xml" value="0.33" />
-        <entry key="..\:/Users/Angel/AndroidStudioProjects/AppMySQLCategorias/app/src/main/res/layout/fragment_q_categorias.xml" value="0.20416666666666666" />
-        <entry key="..\:/Users/Angel/AndroidStudioProjects/AppMySQLCategorias/app/src/main/res/layout/nav_header_main.xml" value="0.20416666666666666" />
-        <entry key="..\:/Users/Angel/AndroidStudioProjects/AppMySQLCategorias/app/src/main/res/menu/activity_main_drawer.xml" value="0.20416666666666666" />
-        <entry key="..\:/Users/Angel/AndroidStudioProjects/AppMySQLCategorias/app/src/main/res/menu/main.xml" value="0.20416666666666666" />
-        <entry key="..\:/Users/ITCA/AndroidStudioProjects/appMySQL/app/src/main/res/layout/content_main.xml" value="0.34479166666666666" />
-        <entry key="..\:/Users/ITCA/AndroidStudioProjects/appMySQL/app/src/main/res/layout/fragment_categorias.xml" value="0.5" />
-        <entry key="..\:/Users/ITCA/AndroidStudioProjects/appMySQL/app/src/main/res/layout/fragment_gallery.xml" value="0.2604166666666667" />
-        <entry key="..\:/Users/ITCA/AndroidStudioProjects/appMySQL/app/src/main/res/layout/fragment_home.xml" value="0.2604166666666667" />
-        <entry key="..\:/Users/ITCA/AndroidStudioProjects/appMySQL/app/src/main/res/layout/fragment_productos.xml" value="0.2604166666666667" />
-        <entry key="..\:/Users/ITCA/AndroidStudioProjects/appMySQL/app/src/main/res/layout/fragment_q_categorias.xml" value="0.2604166666666667" />
-        <entry key="..\:/Users/ITCA/AndroidStudioProjects/appMySQL/app/src/main/res/layout/fragment_qproductos.xml" value="0.2604166666666667" />
-        <entry key="..\:/Users/ITCA/AndroidStudioProjects/appMySQL/app/src/main/res/layout/nav_header_main.xml" value="0.25" />
-        <entry key="..\:/Users/ITCA/AndroidStudioProjects/appMySQL/app/src/main/res/menu/activity_main_drawer.xml" value="0.5" />
-        <entry key="..\:/Users/ITCA/AndroidStudioProjects/appMySQL/app/src/main/res/menu/main.xml" value="0.25" />
-        <entry key="..\:/Users/Salvador/Documents/Android Studio/App-MYSQL/app/src/main/res/layout/activity_login.xml" value="0.20416666666666666" />
-        <entry key="..\:/Users/Salvador/Documents/Android Studio/App-MYSQL/app/src/main/res/layout/activity_main.xml" value="0.2" />
-        <entry key="..\:/Users/Salvador/Documents/Android Studio/App-MYSQL/app/src/main/res/layout/activity_registrar_usuario.xml" value="0.20416666666666666" />
-        <entry key="..\:/Users/Salvador/Documents/Android Studio/App-MYSQL/app/src/main/res/layout/app_bar_main.xml" value="0.20416666666666666" />
-        <entry key="..\:/Users/Salvador/Documents/Android Studio/App-MYSQL/app/src/main/res/layout/content_main.xml" value="0.20416666666666666" />
-        <entry key="..\:/Users/Salvador/Documents/Android Studio/App-MYSQL/app/src/main/res/layout/fragment_categorias.xml" value="0.33" />
-        <entry key="..\:/Users/Salvador/Documents/Android Studio/App-MYSQL/app/src/main/res/layout/fragment_home.xml" value="0.1" />
-        <entry key="..\:/Users/Salvador/Documents/Android Studio/App-MYSQL/app/src/main/res/layout/fragment_productos.xml" value="0.20416666666666666" />
-        <entry key="..\:/Users/Salvador/Documents/Android Studio/App-MYSQL/app/src/main/res/layout/fragment_q_categorias.xml" value="0.17415730337078653" />
-        <entry key="..\:/Users/Salvador/Documents/Android Studio/App-MYSQL/app/src/main/res/layout/fragment_qproductos.xml" value="0.20416666666666666" />
-        <entry key="..\:/Users/Salvador/Documents/Android Studio/App-MYSQL/app/src/main/res/layout/fragment_qusuario.xml" value="0.20416666666666666" />
-        <entry key="..\:/Users/Salvador/Documents/Android Studio/App-MYSQL/app/src/main/res/layout/fragment_usuario.xml" value="0.203125" />
-        <entry key="..\:/Users/Salvador/Documents/Android Studio/App-MYSQL/app/src/main/res/layout/nav_header_main.xml" value="0.2" />
-        <entry key="..\:/Users/Salvador/Documents/Android Studio/App-MYSQL/app/src/main/res/menu/activity_main_drawer.xml" value="0.20416666666666666" />
-        <entry key="..\:/Users/Salvador/Documents/Android Studio/App-MYSQL/app/src/main/res/menu/main.xml" value="0.20416666666666666" />
-        <entry key="..\:/Users/garcia/AndroidStudioProjects/App-MYSQL/app/src/main/res/layout/activity_login.xml" value="0.25" />
-        <entry key="..\:/Users/garcia/AndroidStudioProjects/App-MYSQL/app/src/main/res/layout/activity_registrar_usuario.xml" value="0.25" />
+        <entry key="app/src/main/res/drawable/splashscreen.xml" value="0.153" />
+        <entry key="app/src/main/res/layout/activity_login.xml" value="0.42126514131897713" />
+        <entry key="app/src/main/res/layout/activity_main.xml" value="0.19791666666666666" />
+        <entry key="app/src/main/res/layout/activity_registrar_usuario.xml" value="0.19791666666666666" />
+        <entry key="app/src/main/res/layout/app_bar_main.xml" value="0.19791666666666666" />
+        <entry key="app/src/main/res/layout/content_main.xml" value="0.19791666666666666" />
+        <entry key="app/src/main/res/layout/fragment_categorias.xml" value="0.19791666666666666" />
+        <entry key="app/src/main/res/layout/fragment_home.xml" value="0.19791666666666666" />
+        <entry key="app/src/main/res/layout/fragment_productos.xml" value="0.19791666666666666" />
+        <entry key="app/src/main/res/layout/nav_header_main.xml" value="0.6531645569620254" />
       </map>
     </option>
   </component>
-  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="11" project-jdk-type="JavaSDK">
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/build/classes" />
   </component>
   <component name="ProjectType">

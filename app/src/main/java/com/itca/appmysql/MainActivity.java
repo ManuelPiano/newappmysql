@@ -1,5 +1,7 @@
 package com.itca.appmysql;
 
+import static java.lang.Thread.sleep;
+
 import android.os.Bundle;
 import android.view.View;
 import android.view.Menu;
@@ -23,6 +25,12 @@ public class MainActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        try {
+            Thread.sleep(5000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+        setTheme(R.style.Splashtheme);
         super.onCreate(savedInstanceState);
 
         binding = ActivityMainBinding.inflate(getLayoutInflater());
